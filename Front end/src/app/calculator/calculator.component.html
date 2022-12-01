@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href ="calculator.component.css">
+        
+    </head>
+
+    <body style = "justify-content: center; align-items: center;">
+        <div class = "nums_operations">
+            <div class= "eqn" [textContent]= [eqn]></div>
+
+            <div class = "result" [textContent]= [content]></div>
+            
+            <div class = "buttons">
+                <button (click)="one_operator('p')" class = "item percent operator">%</button>
+                <button (click)="clear()" class = "item item1 clear">CE</button>
+                <button (click)="clear()" class = "item item1 clear">C</button>
+                <button (click)="remove()" class = "item item1 clear"> ⌫ </button>
+
+                <button (click)="one_operator('1/x')" class = "item multi inverse">1/x</button>
+                <button (click)="one_operator('X²')" class = "item square">X²</button>
+                <button (click)="one_operator('√x')" class = "item squareRoot">√x</button>
+                <button (click)="two_operator('/')" class = "item item3 operator">/</button>
+
+                <button (click)="clicked('7')" class = "item numbers">7</button>
+                <button (click)="clicked('8')" class = "item numbers">8</button>
+                <button (click)="clicked('9')" class = "item numbers">9</button>
+                <button (click)="two_operator('×')" class = "item item3 operator">×</button>
+
+                <button (click)="clicked('4')" class = "item numbers">4</button>
+                <button (click)="clicked('5')" class = "item numbers">5</button>
+                <button (click)="clicked('6')" class = "item numbers">6</button>
+                <button (click)="two_operator('-')" class = "item item3 operator">-</button>
+
+                <button (click)="clicked('1')" class = "item numbers">1</button>
+                <button (click)="clicked('2')" class = "item numbers">2</button>
+                <button (click)="clicked('3')" class = "item numbers"> 3</button>
+                <button (click)="two_operator('+')" class = "item item3 operator">+</button>
+
+                <button (click)="one_operator('+/-')" class = "item item1 inverse">+/-</button>
+                <button (click)="clicked('0')" class = "item numbers">0</button>
+                <button (click)="clicked('.')" class = "item dot">.</button>
+                <button (click)="equal()" class = "item item3 equals">=</button>
+                
+            </div>
+        </div>
+        
+    </body>
+</html>
